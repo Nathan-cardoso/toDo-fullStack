@@ -1,12 +1,12 @@
 from django.contrib import admin
-from .models import Task, Customer
+from .models import Task, Profile
 # Register your models here.
 
 class TaskAdmin(admin.ModelAdmin):
     list_display = ('title', 'description', 'created_at', 'updated_at', 'concluded')
 
-class CustomerAdmin(admin.ModelAdmin):
+class ProfileAdmin(admin.ModelAdmin):
     list_display = ('username', 'email', 'first_name', 'last_name', 'is_staff')
 
 admin.site.register(Task, TaskAdmin)
-admin.site.register(Customer, CustomerAdmin)
+admin.site.register(Profile, ProfileAdmin)
